@@ -14,7 +14,8 @@ public abstract class Bird {
 		
 	}
 
-	public Bird(DepartingBirds departingBirds) {
+	public Bird(DepartingBirds departingBirds, int weight) {
+		this.weight=weight;
 		this.departingBirds = departingBirds;
 	}
 
@@ -30,8 +31,17 @@ public abstract class Bird {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	private int weight;
 
-	public abstract String getWeight();
+	public int getWeight() {
+		return weight;
+	}
+
+	public void setWeight(int weight) {
+		this.weight = weight;
+	}
+
+
  
 	
 }

@@ -3,7 +3,6 @@ package Manager;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Comparator;
 
 import Birds.Bird;
 
@@ -11,6 +10,9 @@ public class ZooManager {
 
 	List<Bird> parameterBirdList = new LinkedList<>();
 
+	public void setBird(List<Bird> bird) {
+		this.bird = bird;
+	}
 	private List<Bird> bird = new LinkedList<>();
 
 	public ZooManager() {
@@ -63,9 +65,9 @@ public class ZooManager {
 		this.parameterBirdList = parameterBirdList;
 	}
 
-	public void sortByWeight(List<Bird> list) {
-		parameterBirdList.sort((Bird o1, Bird o2)->o1.getWeight().compareTo(o2.getWeight()));
-	}
+	public void sortByWeight(List<Bird> parameterBirdList) {
+		parameterBirdList.sort((Bird o1, Bird o2)->o1.getWeight()-o2.getWeight());
+}
 	public void addBird(Bird bird) {
 		this.bird.add(bird);
 		

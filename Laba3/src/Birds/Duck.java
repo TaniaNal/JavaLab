@@ -5,25 +5,16 @@ import enums.DepartingBirds;
 public class Duck extends Bird {
 
 	private int speedOfFlight;
-	private String Weight;
-	public Duck(String departing, int speedOfFlight) {
-		super(DepartingBirds.DUCK);
+	public Duck(String departing, int speedOfFlight, int weight) {
+		super(DepartingBirds.FLYAWAY, weight);
 		this.speedOfFlight = speedOfFlight;
 	}
 
 	
-	public String getWeight() {
-		return Weight;
-	}
+	
 
-
-	public void setWeight(String weight) {
-		Weight = weight;
-	}
-
-
-	public Duck(String departing, DepartingBirds departingBirds) {
-		super(departingBirds);
+	public Duck(String departing, DepartingBirds departingBirds, int weight) {
+		super(departingBirds, weight);
 	}
 
 	public int getSpeedOfFlight() {
@@ -35,7 +26,7 @@ public class Duck extends Bird {
 	}
 	@Override
 	public String toString() {
-		return "Duck";
+		return "Duck [speedOfFlight=" + speedOfFlight + ",  Departing=" +getDepartingBirds() +", Weight=" + getWeight()+  "]";
 	}
 
 }

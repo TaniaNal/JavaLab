@@ -5,22 +5,15 @@ import enums.DepartingBirds;
 public class Stock extends Bird {
 
 	private int leghtOfLegs;
-	private String Weight;
-	public Stock(String departing, int speedOfFlight, int leghtOfLegs) {
-		super(DepartingBirds.STOCK);
+	public Stock(String departing, int speedOfFlight, int leghtOfLegs, int weight) {
+		super(DepartingBirds.FLYAWAY, weight);
 		this.leghtOfLegs = leghtOfLegs;
 	}
 
-	public String getWeight() {
-		return Weight;
-	}
 
-	public void setWeight(String weight) {
-		Weight = weight;
-	}
 
-	public Stock(String departing, DepartingBirds departingBirds) {
-		super(departingBirds);
+	public Stock(String departing, DepartingBirds departingBirds, int weight) {
+		super(departingBirds, weight);
 	}
 
 	public int getLeghtOfLegs() {
@@ -32,7 +25,7 @@ public class Stock extends Bird {
 	}
 	@Override
 	public String toString() {
-		return "Stock";
+		return "Stock [leghtOfLegs=" + leghtOfLegs + ", Departing=" +getDepartingBirds() +", Weight=" + getWeight()+ "]";
 	}
 }
 

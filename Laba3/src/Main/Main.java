@@ -24,9 +24,11 @@ public class Main {
 		ZooManager tania = new ZooManager();
 
 		List<Bird> arrayList = new LinkedList<>();
-		arrayList.add(new Duck("Duck", 2));
-		arrayList.add(new Sparrow("Sparrow", 8));
-		arrayList.add(new Stock("Stock", DepartingBirds.FLYAWAY));
+		arrayList.add(new Sparrow("Sparrow", 8,6));
+		arrayList.add(new Stock("Stock", 6, 89,56));
+		arrayList.add(new Duck("Duck", 2, 5));
+		
+		tania.setBird(arrayList);
 
 		boolean menu = true;
 		while (menu) {
@@ -56,7 +58,9 @@ public class Main {
 				break;
 			}
 			case 3: {
-				System.out.println();
+				System.out.println("\nSorted list:\n");
+				tania.sortByWeight(tania.getBird());
+				tania.getBird().forEach((Bird o1)->System.out.println(o1.toString()));
 				break;
 			}
 			case 4:
