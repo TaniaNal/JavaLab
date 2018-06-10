@@ -1,0 +1,9 @@
+birds\Duck.class
+manager\ZooManager.class
+Server.class
+birds\Bird.class
+birds\BirdsWriter.class
+enums\BirdType.class
+birds\Sparrow.class
+birds\Stock.class
+config\JaxRsConfig.class
